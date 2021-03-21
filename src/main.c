@@ -36,18 +36,18 @@ int main(int argc, char* args[])
     
     while(g.running == true)
     {
-    int frame_start_time = SDL_GetTicks();
-    
-    input();
-    update();
-    render();
-                                
+        int frame_start_time = SDL_GetTicks();
+        
+        input();
+        update();
+        render();
+                                    
 #ifndef RELEASE
-    show_framerate(start_time,counted_frames);
+        show_framerate(start_time,counted_frames);
 #endif
-    cap_framerate(frame_start_time);
-    
-    counted_frames++;
+        cap_framerate(frame_start_time);
+        
+        counted_frames++;
     }
                 
     cleanup();
